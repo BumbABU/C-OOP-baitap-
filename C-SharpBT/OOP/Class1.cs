@@ -172,7 +172,7 @@ namespace C_SharpBT.OOP
             this.tuoi = tuoi;
         }
 
-        //h.Nhap va xuat danh sach cac nhan vien
+        
        
       
 
@@ -186,6 +186,7 @@ namespace C_SharpBT.OOP
 
         Nhanvien[] danhsach;
         
+        //ham nhap ds nhan vien
 
         public void nhapDSnv()
         {
@@ -220,6 +221,7 @@ namespace C_SharpBT.OOP
             }
         }
 
+        //ham xuat ds nhan vien
         public void xuatDSnhanvien()
         {
             Console.WriteLine("Hay nhap so luong can xuat : ");
@@ -242,7 +244,8 @@ namespace C_SharpBT.OOP
             }
 
         }
-
+        
+        // ham tim so tuoi lon nhat 
         public int timmaxtuoi()
         {
             int max = danhsach[0].TUOI;
@@ -270,6 +273,7 @@ namespace C_SharpBT.OOP
             return max;
         }
 
+        //ham tim kiem theo ten
         public void timkiemtheoTen ()
         {
             Console.WriteLine("Vui long nhap ten can tim : ");
