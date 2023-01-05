@@ -1,0 +1,15 @@
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\bin\Debug\net6.0\C-SharpBT.exe
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\bin\Debug\net6.0\C-SharpBT.deps.json
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\bin\Debug\net6.0\C-SharpBT.runtimeconfig.json
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\bin\Debug\net6.0\C-SharpBT.dll
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\bin\Debug\net6.0\C-SharpBT.pdb
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.csproj.AssemblyReference.cache
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.AssemblyInfoInputs.cache
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.AssemblyInfo.cs
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.csproj.CoreCompileInputs.cache
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.dll
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\refint\C-SharpBT.dll
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.pdb
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\C-SharpBT.genruntimeconfig.cache
+C:\Users\tingu\Desktop\C-Sharp-OOP\C-SharpBT\C-SharpBT\obj\Debug\net6.0\ref\C-SharpBT.dll
