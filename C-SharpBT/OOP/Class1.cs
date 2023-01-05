@@ -10,11 +10,12 @@ namespace C_SharpBT.OOP
 {
     internal class Nhanvien
     {
-        private string maNV;
+        public string maNV;
         private string tenNV;
         private bool gtinh;
         private string sdt;
         private DateTime ngaySinh;
+        private int tuoi;
          
         //default constructor 
         public Nhanvien()
@@ -24,12 +25,22 @@ namespace C_SharpBT.OOP
             this.gtinh = false;
             this.sdt = "000000000000001";
             this.ngaySinh = new DateTime(2000, 1, 1);
+            this.tuoi = 0;
 
         }
 
 
         //b. xây dụng method set get
         //1.set
+        public void setTuoi(int tuoi)
+        {
+            this.tuoi = tuoi;
+        }
+
+        public int getTuoi()
+        {
+            return this.tuoi;
+        }
         public void setmaNV(string maNV)
         {
             this.maNV = maNV;
@@ -113,6 +124,12 @@ namespace C_SharpBT.OOP
             get { return this.ngaySinh; }
         }
 
+        public int TUOI
+        {
+            set { this.tuoi = value; }
+            get { return this.tuoi; }
+        }
+
         // d. Ham xuat dl
         public void Xuatdl()
         {
@@ -145,86 +162,140 @@ namespace C_SharpBT.OOP
         }
 
         //f.ham nhap doi tuong nv;
-        public Nhanvien(string maNV, string tenNV, bool gtinh, string sdt, DateTime ngaySinh)
+        public Nhanvien(string maNV, string tenNV, bool gtinh, string sdt, DateTime ngaySinh, int tuoi)
         {
             this.maNV = maNV;
             this.tenNV = tenNV;
             this.gtinh = gtinh;
             this.sdt = sdt;
             this.ngaySinh = ngaySinh;
+            this.tuoi = tuoi;
         }
 
         //h.Nhap va xuat danh sach cac nhan vien
        
-        public void nhapxuatDSnhanvien()
+      
+
+
+  
+    }
+
+    internal class dsNhanvien
+    {
+        int soluong;
+
+        Nhanvien[] danhsach;
+        
+
+        public void nhapDSnv()
         {
-            Console.WriteLine("Hay nhap so luong nhan vien :");
+            Console.WriteLine("So luong nhan vien can nhap : ");
             int x;
+            
             x = Convert.ToInt32(Console.ReadLine());
-            Nhanvien[] dsnhanvien = new Nhanvien[x];
+             danhsach = new Nhanvien[x];
             for (int i = 0; i < x; i++)
             {
+                soluong++;
                 Console.WriteLine("Nhap nhan vien thu i = " + i);
-                dsnhanvien[i] = new Nhanvien();
+                danhsach[i] = new Nhanvien();
 
                 Console.WriteLine("Nhap ma nv  :");
-                dsnhanvien[i].maNV = Console.ReadLine();
+                danhsach[i].MANV = Console.ReadLine();
 
                 Console.WriteLine("Nhap ten nv :");
-                dsnhanvien[i].tenNV = Console.ReadLine();
+                danhsach[i].TENNV = Console.ReadLine();
 
                 Console.WriteLine("nhap gtinh nv :");
-                dsnhanvien[i].gtinh = Convert.ToBoolean(Console.ReadLine());
+                danhsach[i].GIOITINH = Convert.ToBoolean(Console.ReadLine());
 
                 Console.WriteLine("nhap sdt nv :");
-                dsnhanvien[i].sdt = Console.ReadLine();
-
+                danhsach[i].SDT = Console.ReadLine();
                 Console.WriteLine("Nhap ngay thang nam sinh nv : ");
-                dsnhanvien[i].ngaySinh = Convert.ToDateTime(Console.ReadLine());
+                danhsach[i].NGAYSINH = Convert.ToDateTime(Console.ReadLine());
+                Console.WriteLine("Tuoi nv : ");
+                danhsach[i].TUOI = Convert.ToInt32(Console.ReadLine());
 
 
             }
-            for (int i = 0; i < x; i++)
-            {
-                Console.WriteLine("Xuat nhan vien thu i = " + i);
-                Console.WriteLine("maNV : " + dsnhanvien[i].maNV);
-                Console.WriteLine("tenNV : " + dsnhanvien[i].tenNV);
-                if (dsnhanvien[i].gtinh == true)
-                {
-                    Console.WriteLine("gTinh : Nam ");
-                }
-                else Console.WriteLine("gTinh : Nu ");
-
-                Console.WriteLine(" SDT : " + dsnhanvien[i].SDT);
-                Console.WriteLine("Ngay sinh : " + dsnhanvien[i].ngaySinh);
-            }
-
         }
 
-        
-       /* public void xuatDSnhanvien()
+        public void xuatDSnhanvien()
         {
             Console.WriteLine("Hay nhap so luong can xuat : ");
             int x;
             x = Convert.ToInt32(Console.ReadLine());
 
-            Nhanvien[] dsnhanvien = new Nhanvien[x];
+            
             for (int i = 0; i < x; i++)
             {
-                Console.WriteLine("maNV : " + dsnhanvien[i].maNV);
-                Console.WriteLine("tenNV : " + dsnhanvien[i].tenNV);
-                if (dsnhanvien[i].gtinh == true)
+                Console.WriteLine("maNV : " + danhsach[i].MANV);
+                Console.WriteLine("tenNV : " + danhsach[i].TENNV);
+                if (danhsach[i].GIOITINH == true)
                 {
                     Console.WriteLine("gTinh : Nam ");
                 }
                 else Console.WriteLine("gTinh : Nu ");
 
-                Console.WriteLine(" SDT : " + dsnhanvien[i].SDT);
-                Console.WriteLine("Ngay sinh : " + dsnhanvien[i].ngaySinh);
+                Console.WriteLine(" SDT : " + danhsach[i].SDT);
+                Console.WriteLine("Ngay sinh : " + danhsach[i].NGAYSINH);
             }
 
         }
-*/
+
+        public int timmaxtuoi()
+        {
+            int max = danhsach[0].TUOI;
+            
+            for (int i =0; i < danhsach.Length; i++)
+            {
+
+                if (danhsach[i].TUOI > max)
+                {
+                    max = danhsach[i].TUOI;
+
+                }
+            }
+                Console.WriteLine("so tuoi lon nhat la " + max);
+               
+            for (int i =0;i<danhsach.Length ;i++)
+            {
+                if (danhsach[i].TUOI == max)
+                {
+                    Console.WriteLine("Nguoi co so tuoi lon nhat ten la  " + danhsach[i].TENNV);
+                }
+            }
+
+            
+            return max;
+        }
+
+        public void timkiemtheoTen ()
+        {
+            Console.WriteLine("Vui long nhap ten can tim : ");
+            string tencantim = Console.ReadLine();
+
+            for (int i =0; i<danhsach.Length;i++)
+            {
+                if (danhsach[i].TENNV == tencantim)
+                {
+                    Console.WriteLine("maNV : " + danhsach[i].MANV);
+                    Console.WriteLine("tenNV : " + danhsach[i].TENNV);
+                    if (danhsach[i].GIOITINH == true)
+                    {
+                        Console.WriteLine("gTinh : Nam ");
+                    }
+                    else Console.WriteLine("gTinh : Nu ");
+
+                    Console.WriteLine(" SDT : " + danhsach[i].SDT);
+                    Console.WriteLine("Ngay sinh : " + danhsach[i].NGAYSINH);
+                    break;
+
+                }
+                Console.WriteLine("Khong tim thay nguoi co ten la :" + tencantim);
+            }
+            
+        }
 
 
     }

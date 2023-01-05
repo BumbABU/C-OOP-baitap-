@@ -5,8 +5,11 @@ internal class Program
     private static void Main(string[] args)
     {
         Nhanvien nhanvienx = new Nhanvien();
-        nhanvienx.nhapxuatDSnhanvien();
-      
+        dsNhanvien dsnhanvien = new dsNhanvien();
+        dsnhanvien.nhapDSnv();
+        /*dsnhanvien.xuatDSnhanvien();*/
+        dsnhanvien.timkiemtheoTen();
+        
 
 
 
